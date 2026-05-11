@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Directory Admin | MoEF CMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f9f9f8;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f8",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "on-primary-container": "#86af99",
+                        "primary": "#012d1d",
+                        "on-primary-fixed": "#002114",
+                        "inverse-surface": "#2e3131",
+                        "on-tertiary-container": "#d29895",
+                        "on-secondary-container": "#7a502e",
+                        "on-tertiary-fixed": "#331111",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#a5d0b9",
+                        "tertiary-fixed": "#ffdad8",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "surface": "#f9f9f8",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1b4332",
+                        "surface-variant": "#e1e3e2",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#673a39",
+                        "on-background": "#191c1c",
+                        "surface-tint": "#3f6653",
+                        "on-secondary-fixed": "#2f1500",
+                        "surface-container-low": "#f3f4f3",
+                        "outline": "#717973",
+                        "inverse-on-surface": "#f0f1f0",
+                        "secondary-fixed": "#ffdcc3",
+                        "secondary": "#7f5533",
+                        "primary-fixed": "#c1ecd4",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#414844",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dad9",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1c",
+                        "surface-container-highest": "#e1e3e2",
+                        "surface-container-high": "#e7e8e7",
+                        "outline-variant": "#c1c8c2",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "background": "#f9f9f8",
+                        "tertiary-container": "#5a302f",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#401b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#edeeed",
+                        "secondary-container": "#ffc69b",
+                        "tertiary-fixed-dim": "#f5b7b4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "md": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "caption": ["Public Sans"],
+                        "headline-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-bright text-on-surface">
+<!-- SideNavBar -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low dark:bg-inverse-surface flex flex-col h-full py-md border-r border-outline-variant z-50">
+<div class="px-6 mb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim">MoEF Admin</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Official CMS Portal</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="article_manager.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                Article Manager
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+                Service Directory
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="complaint_manager.html">
+<span class="material-symbols-outlined" data-icon="feedback">feedback</span>
+                Complaint Manager
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="reports.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Reports &amp; Publications
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="media_library.html">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+                Media Library
+            </a>
+</nav>
+<div class="px-4 py-6 border-t border-outline-variant mt-auto">
+<button class="w-full mb-4 bg-primary text-white font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                Create New Article
+            </button>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                    Kembali ke Menu Utama
+                </a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="index.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Log Out
+                </a>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-gutter w-full h-16 sticky top-0 z-40 bg-surface-container-lowest shadow-sm dark:shadow-none">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant material-symbols-outlined" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full w-64 text-body-md focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Search services..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+<div class="flex items-center gap-3 border-l border-outline-variant pl-6">
+<div class="text-right">
+<p class="font-label-md text-label-md text-primary">Admin User</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider font-bold">MoEF CMS Manager</p>
+</div>
+<img alt="Administrator profile" class="w-10 h-10 rounded-full border border-primary/20" data-alt="A professional headshot of a middle-aged male administrator in a modern office environment. The lighting is bright and even, typical of a professional corporate setting. He is wearing a dark, well-tailored business suit. The background is a soft-focus interior with minimalist architectural lines and a hint of indoor greenery, reflecting the MoEF brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWS7Yrv1ggZUgRQiFSuwGQ53D6NvpsVIOcp9Uo9Zm__3Agu1hQo85Q5d5HdihX2sJ9S3_1s2w15bxvdJyF1OCE1YveXncaPuYFzeMEpv4S-fyEW-Lw7FBPwNdMVGe8eS6414_XEkdSqkeXWS5iXepcLE6YukyFmsB45Or5LggIX-Nz3DW81JASTlg32HfWDDuRsIbc9iIn6Wivm2p9J3JBG0dVwtX5rxzOEykL2V_JgbnzrcTKx1Yy7BnnyXQG9sC1--zdaKv1-FY"/>
+</div>
+</div>
+</header>
+<section class="p-8 max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-2">Service Directory</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Manage the official Ministry services ('Layanan Kementerian') displayed on the public landing page.</p>
+</div>
+<button class="bg-primary text-white h-12 px-6 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:bg-primary-container transition-all shadow-md active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add New Service
+                </button>
+</div>
+<!-- Bento Grid of Services -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.08)] hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-primary-fixed text-primary transition-colors" title="Edit Service">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-error-container text-error transition-colors" title="Hide Service">
+<span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+</button>
+</div>
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-primary-fixed">
+<span class="material-symbols-outlined !text-4xl" data-icon="dashboard">dashboard</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Environmental data and monitoring dashboard for real-time national statistics.</p>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Active</span>
+<span class="text-caption text-on-surface-variant font-caption">Last updated: 2h ago</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.08)] hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-primary-fixed text-primary transition-colors" title="Edit Service">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-error-container text-error transition-colors" title="Hide Service">
+<span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+</button>
+</div>
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-primary-fixed">
+<span class="material-symbols-outlined !text-4xl" data-icon="assignment">assignment</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">PTSP</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Integrated one-stop service for environmental permits and licenses.</p>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Active</span>
+<span class="text-caption text-on-surface-variant font-caption">Last updated: 1d ago</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.08)] hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-primary-fixed text-primary transition-colors" title="Edit Service">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-error-container text-error transition-colors" title="Hide Service">
+<span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+</button>
+</div>
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-primary-fixed">
+<span class="material-symbols-outlined !text-4xl" data-icon="report_problem">report_problem</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Pengaduan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Public complaint portal for environmental violations and reporting.</p>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Active</span>
+<span class="text-caption text-on-surface-variant font-caption">Last updated: 5h ago</span>
+</div>
+</div>
+<!-- Service Card 4 (Hidden State) -->
+<div class="bg-surface-container border border-dashed border-outline-variant p-6 rounded-xl transition-all group relative opacity-70">
+<div class="absolute top-0 right-0 p-4 opacity-100 flex gap-2">
+<button class="p-2 bg-white rounded-full hover:bg-primary-fixed text-primary transition-colors" title="Edit Service">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 bg-white rounded-full hover:bg-primary-container text-primary-fixed transition-colors" title="Unhide Service">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mb-6 text-on-surface-variant">
+<span class="material-symbols-outlined !text-4xl" data-icon="library_books">library_books</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface-variant mb-2">E-Library</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Digital archive of research papers and environmental journals.</p>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Hidden</span>
+<span class="text-caption text-on-surface-variant font-caption">Archived</span>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.08)] hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all group relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-primary-fixed text-primary transition-colors" title="Edit Service">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 bg-surface-container-high rounded-full hover:bg-error-container text-error transition-colors" title="Hide Service">
+<span class="material-symbols-outlined" data-icon="visibility_off">visibility_off</span>
+</button>
+</div>
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6 text-primary-fixed">
+<span class="material-symbols-outlined !text-4xl" data-icon="map">map</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Geoportal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">GIS mapping and spatial data visualization for conservation areas.</p>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-outline-variant">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Active</span>
+<span class="text-caption text-on-surface-variant font-caption">Last updated: 3d ago</span>
+</div>
+</div>
+<!-- Add New Placeholder -->
+<button class="border-2 border-dashed border-outline-variant p-6 rounded-xl hover:border-primary hover:bg-primary-fixed/10 transition-all group flex flex-col items-center justify-center text-center gap-4">
+<div class="w-16 h-16 border-2 border-dashed border-outline-variant group-hover:border-primary group-hover:bg-primary-container rounded-full flex items-center justify-center text-on-surface-variant group-hover:text-primary-fixed transition-all">
+<span class="material-symbols-outlined !text-4xl" data-icon="add">add</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface-variant group-hover:text-primary transition-colors">Add New Service</p>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">Create a new service entry for the landing page.</p>
+</div>
+</button>
+</div>
+<!-- Management Insight Section -->
+<div class="mt-xl bg-primary-container text-white p-lg rounded-2xl flex items-center gap-xl relative overflow-hidden">
+<div class="flex-1 z-10">
+<h3 class="font-headline-lg text-headline-lg mb-4">Service Visibility Stats</h3>
+<div class="grid grid-cols-3 gap-gutter">
+<div class="bg-white/10 p-4 rounded-xl backdrop-blur-md">
+<p class="font-label-md text-label-md opacity-80 uppercase tracking-wider mb-2">Total Services</p>
+<p class="text-display-lg font-display-lg">12</p>
+</div>
+<div class="bg-white/10 p-4 rounded-xl backdrop-blur-md">
+<p class="font-label-md text-label-md opacity-80 uppercase tracking-wider mb-2">Active</p>
+<p class="text-display-lg font-display-lg text-primary-fixed">9</p>
+</div>
+<div class="bg-white/10 p-4 rounded-xl backdrop-blur-md">
+<p class="font-label-md text-label-md opacity-80 uppercase tracking-wider mb-2">Hidden</p>
+<p class="text-display-lg font-display-lg text-secondary-fixed">3</p>
+</div>
+</div>
+</div>
+<div class="w-1/3 h-full z-0 opacity-20 absolute right-0 top-0">
+<img class="w-full h-full object-cover" data-alt="A lush, detailed overhead view of a tropical Indonesian rainforest canopy. The photograph captures the rich, deep forest greens and the complex patterns of tree crowns. Soft morning mist weaves through the foliage, creating a serene and authoritative atmosphere that represents environmental conservation and the Ministry's domain. The lighting is ethereal and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDih32N8BxeWM_ogSPA9rwGlMFQI-IQYCkLj4LLfZSd1kKYnU8UBuKodul2ncARo-cqTqtpg9Pg8LI4rAvDONg1WhJYSwFZZkQtnpnwUCAVO6WinebwqZCuq-QI0qmJLu7cCrv1AzBIt7f_sZkfFIRNaKXU0ScZ4km6JPjwA4fUPs03MkywM2QsIOFaBjKdwtyPfbfddi0ErgWnZgTl0FxLFBRvHccY5w2M9_zKdKpWYMWltmGxfVh9BeJZwGZro7v36qqvrOaPwOU"/>
+</div>
+<div class="hidden lg:block w-48 shrink-0 z-10">
+<div class="w-full aspect-square rounded-full border-4 border-primary-fixed flex flex-col items-center justify-center text-center p-4">
+<span class="font-display-lg text-display-lg leading-none">75%</span>
+<span class="font-label-md text-label-md opacity-80">Public Usage</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="p-gutter max-w-container-max mx-auto text-on-surface-variant flex justify-between items-center border-t border-outline-variant mt-xl">
+<p class="font-caption text-caption">© 2024 Ministry of Environment and Forestry (MoEF) CMS Portal. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="font-caption text-caption hover:text-primary" href="#">System Status</a>
+<a class="font-caption text-caption hover:text-primary" href="#">Admin Guide</a>
+<a class="font-caption text-caption hover:text-primary" href="#">Privacy Policy</a>
+</div>
+</footer>
+</main>
+</body></html>

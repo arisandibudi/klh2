@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article Manager - MoEF CMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f8",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "on-primary-container": "#86af99",
+                        "primary": "#012d1d",
+                        "on-primary-fixed": "#002114",
+                        "inverse-surface": "#2e3131",
+                        "on-tertiary-container": "#d29895",
+                        "on-secondary-container": "#7a502e",
+                        "on-tertiary-fixed": "#331111",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#a5d0b9",
+                        "tertiary-fixed": "#ffdad8",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "surface": "#f9f9f8",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1b4332",
+                        "surface-variant": "#e1e3e2",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#673a39",
+                        "on-background": "#191c1c",
+                        "surface-tint": "#3f6653",
+                        "on-secondary-fixed": "#2f1500",
+                        "surface-container-low": "#f3f4f3",
+                        "outline": "#717973",
+                        "inverse-on-surface": "#f0f1f0",
+                        "secondary-fixed": "#ffdcc3",
+                        "secondary": "#7f5533",
+                        "primary-fixed": "#c1ecd4",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#414844",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dad9",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1c",
+                        "surface-container-highest": "#e1e3e2",
+                        "surface-container-high": "#e7e8e7",
+                        "outline-variant": "#c1c8c2",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "background": "#f9f9f8",
+                        "tertiary-container": "#5a302f",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#401b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#edeeed",
+                        "secondary-container": "#ffc69b",
+                        "tertiary-fixed-dim": "#f5b7b4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "md": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "caption": ["Public Sans"],
+                        "headline-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="w-64 h-screen fixed left-0 top-0 flex flex-col h-full py-md border-r border-outline-variant bg-surface-container-low dark:bg-inverse-surface z-50">
+<div class="px-gutter mb-lg">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="nature">nature</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim leading-none">MoEF Admin</h1>
+<p class="font-caption text-caption text-on-surface-variant">Official CMS Portal</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                Article Manager
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="service_directory.html">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+                Service Directory
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="complaint_manager.html">
+<span class="material-symbols-outlined" data-icon="feedback">feedback</span>
+                Complaint Manager
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="reports.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Reports &amp; Publications
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="media_library.html">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+                Media Library
+            </a>
+</nav>
+<div class="mt-auto px-4 mb-gutter">
+<button class="w-full h-12 bg-primary text-white font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Create New Article
+            </button>
+</div>
+<div class="px-4 border-t border-outline-variant pt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Kembali ke Menu Utama
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md text-error" href="index.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Log Out
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-gutter w-full sticky top-0 z-40 bg-surface-container-lowest h-16 shadow-sm dark:shadow-none">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full pl-10 pr-4 py-2 font-body-md text-body-md focus:ring-2 focus:ring-primary" placeholder="Search articles, documents, or data..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-8 w-px bg-outline-variant mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="font-label-md text-label-md text-on-surface hidden md:block">Administrator</span>
+<img alt="Administrator profile" class="w-10 h-10 rounded-full border-2 border-primary-fixed-dim" data-alt="A professional headshot of a senior Indonesian government official in a sharp, modern business suit. The background is a blurred high-end corporate office with soft, natural lighting. The image maintains a dignified, authoritative, yet approachable mood consistent with a modern institutional design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCibbJSWUP_htAb-PPrTovuaFEvuHfrjf3LBc8Hs_KOx9HpHg4M9OGpGZ_NIv1KBZAghOwZMw8Nu5ccG4lHokXG2NNX7vv87kQu842ZK1mE7_qxAmyOlMAMcVeLzQYpm57x9tEiVhCBONkOoBhvhwPNULsP98Uyt5zJ1BRXf0x5dtVwMh0adMaBEUk5BBzujaWvBI_UJVaQe6XEc7w0JNpNeupPzPHFcoHtN73yvUz_DaFehzusmUKUQe-szf8UXVhrhKqYmz6mLlE"/>
+</div>
+</div>
+</header>
+<!-- Page Header & Actions -->
+<div class="px-gutter pt-lg pb-md max-w-[1200px] mx-auto w-full">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-1">Article Manager</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage environmental publications and official website updates.</p>
+</div>
+<button class="h-12 bg-primary text-white font-label-md text-label-md px-6 rounded-lg flex items-center gap-2 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    Add New Article
+                </button>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-base mb-gutter border-b border-outline-variant">
+<button class="px-6 py-3 font-label-md text-label-md text-primary border-b-2 border-primary transition-colors">All Articles</button>
+<button class="px-6 py-3 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">Published</button>
+<button class="px-6 py-3 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">Drafts</button>
+<button class="px-6 py-3 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">Archived</button>
+</div>
+<!-- Data Table Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Title</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Category</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Author</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Date</th>
+<th class="px-6 py-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Article Row 1 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex-shrink-0 overflow-hidden">
+<img alt="Article feature" class="w-full h-full object-cover" data-alt="A cinematic, high-resolution aerial photograph of a lush, dense Indonesian tropical rainforest under misty morning light. The colors are deep forest greens and vibrant moss tones, reflecting environmental conservation and pristine nature. The composition is clean and professional, suitable for a government publication interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdfmnArhZWRlOTDjXwvUmyfmI1o_c41q6thfFKD2iUs0JZLxy1k2uV3LC5vQau_B10QvGukNlnmZhuOs6Nz-J7eRkmhr8lChGMrVIZLVNsseUqBuhFOfVDG-e_fxBKKEgPUrf9YuRWzjMDubhk8gagHqKq7HTZa77PrwvkvyTLGMc_AvKwZXjXY7jNJGnfuZF3n0vhD5w-MMF8XKncxB6kH7DvsO5aUTE_ogp0bcUU--n-BnW3PWYhfRRyaFLMkOHiKpf4Ro0bH1Y"/>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary block group-hover:underline cursor-pointer">Sustainable Forest Management in North Sumatra</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: #ART-2024-001</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded text-caption font-label-md">Conservation</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center font-label-md text-[10px] text-on-secondary-container">DR</div>
+<span class="font-body-md text-body-md">Dewi R.</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+                                        Published
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Oct 12, 2024</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Article Row 2 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex-shrink-0 overflow-hidden">
+<img alt="Article feature" class="w-full h-full object-cover" data-alt="A close-up, artistic shot of a vibrant green fern leaf with intricate patterns, illuminated by soft sunlight in a dark forest setting. The visual style is modern, sharp, and serene, utilizing a palette of deep emerald and natural wood tones. The lighting emphasizes transparency and biological detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV-urKR8L7rB0PnvRj3bWGcwFboyq8siSvAO3Pl1aIOlotdtdR1T8--1EnyUw0x6eTyE7iL3WcIuxhce66IFEJ2L_gfWezOhA6GSWXkEOAYTvMyz66BxHfN15ZNuUqSC-Gl72xO7WNwfAV_IXOB-QwJXz68pCjuWqx_e_kFvSb-h9879tMRsSdj2eElzKJVhm6pYy1EIRlUFbel2kIs5-ewL7PKF-kRuBS9L7yHTtceukPCW2zx-5J3CdjLQ5kqF2lpVaietl7GUo"/>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary block group-hover:underline cursor-pointer">New Regulations on Carbon Trading Credits</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: #ART-2024-004</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded text-caption font-label-md">Policy</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center font-label-md text-[10px] text-on-tertiary-fixed-variant">AS</div>
+<span class="font-body-md text-body-md">Agus S.</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                                        Draft
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Oct 14, 2024</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Article Row 3 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex-shrink-0 overflow-hidden">
+<img alt="Article feature" class="w-full h-full object-cover" data-alt="A breathtaking view of a sprawling solar farm integrated into a natural landscape in Indonesia. The image captures the harmony between renewable energy technology and environmental stewardship. The lighting is golden hour, casting long, soft shadows and highlighting the clean blue panels against green hills." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzHp82Mk9AEYCibwDfa2jrxuDfLbHF3SnO6WVuRjFyT34Ns2f-JKnn9dlPP_kvoLDwrTrMUsRG-fEC5ThSfAsLulk3lRZcMIxC2u2Lnxt95uPnTy5OqOCDCWvov6cTeACtxOWbx2PdW8oFakxrXAeMk4V008aSMXjIyM8cS4dIEAqp-jx8bfvxVlwa34O_5ej1RJftqVCdo0ImWHXARO1XbMfTEKsbs3sSmzwhT75poOANSQDK1_T3EjZFfbmvDRwC_CJTd65G9UA"/>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary block group-hover:underline cursor-pointer">Impact Report: Clean Energy Initiatives 2024</span>
+<span class="font-caption text-caption text-on-surface-variant">ID: #ART-2024-009</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded text-caption font-label-md">Report</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center font-label-md text-[10px] text-on-primary-fixed-variant">BA</div>
+<span class="font-body-md text-body-md">Bambang A.</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container"></span>
+                                        Published
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<span class="font-body-md text-body-md text-on-surface-variant">Sep 28, 2024</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 flex justify-between items-center bg-surface-container-low border-t border-outline-variant">
+<span class="font-body-md text-body-md text-on-surface-variant">Showing 1 to 3 of 128 results</span>
+<div class="flex gap-2">
+<button class="px-4 py-2 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface transition-colors disabled:opacity-50">Previous</button>
+<button class="px-4 py-2 bg-primary text-white rounded-lg font-label-md text-label-md shadow-sm">1</button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">2</button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">3</button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Section: Quick Insights (Bento Grid Style) -->
+<div class="px-gutter pb-xl max-w-[1200px] mx-auto w-full">
+<h3 class="font-headline-md text-headline-md text-primary mb-md mt-lg">Quick Insights</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-2 bg-primary-container text-on-primary-container p-gutter rounded-2xl flex flex-col justify-between">
+<div>
+<h4 class="font-label-md text-label-md uppercase opacity-80 mb-base">Total Reach</h4>
+<p class="font-display-lg text-display-lg text-white">2.4M</p>
+</div>
+<div class="mt-lg">
+<p class="font-body-md text-body-md text-primary-fixed-dim">Overall page views across all published articles this month.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-gutter rounded-2xl">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase mb-base">Pending Reviews</h4>
+<p class="font-headline-lg text-headline-lg text-primary">12</p>
+<div class="mt-base flex items-center text-error gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="priority_high">priority_high</span>
+<span class="font-caption text-caption">Needs Attention</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-gutter rounded-2xl">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase mb-base">Scheduled</h4>
+<p class="font-headline-lg text-headline-lg text-primary">05</p>
+<div class="mt-base flex items-center text-secondary gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+<span class="font-caption text-caption">Upcoming Posts</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAB for Quick Actions (Mobile Context) -->
+<button class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center z-50">
+<span class="material-symbols-outlined text-[32px]" data-icon="add">add</span>
+</button>
+</main>
+</body></html>

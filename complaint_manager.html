@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Complaint Management Dashboard - MoEF CMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1b4332",
+                        "outline-variant": "#c1c8c2",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#331111",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1c",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "surface-variant": "#e1e3e2",
+                        "surface-bright": "#f9f9f8",
+                        "primary-fixed": "#c1ecd4",
+                        "inverse-on-surface": "#f0f1f0",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#86af99",
+                        "secondary-fixed": "#ffdcc3",
+                        "on-secondary-fixed": "#2f1500",
+                        "inverse-surface": "#2e3131",
+                        "surface-container-low": "#f3f4f3",
+                        "tertiary-fixed-dim": "#f5b7b4",
+                        "tertiary-fixed": "#ffdad8",
+                        "tertiary-container": "#5a302f",
+                        "surface-container-high": "#e7e8e7",
+                        "surface-tint": "#3f6653",
+                        "on-surface-variant": "#414844",
+                        "on-primary": "#ffffff",
+                        "primary": "#012d1d",
+                        "error": "#ba1a1a",
+                        "secondary": "#7f5533",
+                        "on-tertiary-fixed-variant": "#673a39",
+                        "tertiary": "#401b1b",
+                        "surface-container-highest": "#e1e3e2",
+                        "surface-container": "#edeeed",
+                        "on-primary-fixed": "#002114",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "inverse-primary": "#a5d0b9",
+                        "on-tertiary-container": "#d29895",
+                        "on-surface": "#191c1c",
+                        "surface": "#f9f9f8",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "secondary-container": "#ffc69b",
+                        "surface-dim": "#d9dad9",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9f8",
+                        "on-secondary-container": "#7a502e",
+                        "outline": "#717973"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "headline-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low flex flex-col py-md border-r border-outline-variant z-50">
+<div class="px-gutter mb-lg">
+<h1 class="font-headline-lg text-headline-lg text-primary">MoEF Admin</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">Official CMS Portal</p>
+</div>
+<nav class="flex-1 px-4 space-y-1 custom-scrollbar overflow-y-auto">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="pengaturan.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="article_manager.html">
+<span class="material-symbols-outlined">description</span>
+<span>Article Manager</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="service_directory.html">
+<span class="material-symbols-outlined">list_alt</span>
+<span>Service Directory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md" href="complaint_manager.html">
+<span class="material-symbols-outlined">feedback</span>
+<span>Complaint Manager</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="reports.html">
+<span class="material-symbols-outlined">analytics</span>
+<span>Reports &amp; Publications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="media_library.html">
+<span class="material-symbols-outlined">photo_library</span>
+<span>Media Library</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-1 border-t border-outline-variant pt-md">
+<a class="w-full flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Kembali ke Menu Utama</span>
+</a>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</button>
+<a class="w-full flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="index.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Log Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-gutter w-full h-16 sticky top-0 z-40 bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-md flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search complaints, IDs, or regions..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-sm px-md py-1 border-r border-outline-variant mr-md">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80 transition-opacity" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80 transition-opacity" data-icon="help">help</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface">Administrator</p>
+<p class="font-caption text-caption text-on-surface-variant">MoEF Central Office</p>
+</div>
+<img alt="Administrator profile" class="w-10 h-10 rounded-full border border-primary-fixed-dim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeh_uV5h-INWOeKbxSv9uEm8r9UayZ1ky_hzns19cAnHO30jAv5ZXvLPjxv3nXKRSOKyhTPknCIJk-3PTGg2wu-zhrwakH-QZ_gZspwvehPMlfmslIbv_cSzLneMYOIsWPUQc3kqPL4Kvmng4JPT-QHC5tIGnGjSwyXu593mHgZFcwElCQsJRAbsAri9ksBuqySCcSW85WV9xqWunG5pE_5MuALE9TDWKvPsFsnvDPo-Mu3H-dt_IOSdAtgcQoYbqLm7MVjjRjvZA"/>
+</div>
+</div>
+</header>
+<div class="p-gutter max-w-container-max mx-auto space-y-md">
+<!-- Quick Stats Row -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-sm mb-base">
+<span class="material-symbols-outlined text-primary" data-icon="folder_open">folder_open</span>
+<h3 class="font-label-md text-label-md text-on-surface-variant">Total Complaints</h3>
+</div>
+<p class="font-display-lg text-display-lg text-primary">1,284</p>
+<p class="font-caption text-caption text-secondary mt-base flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                        +12% from last month
+                    </p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-sm mb-base">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+<h3 class="font-label-md text-label-md text-on-surface-variant">Pending Verification</h3>
+</div>
+<p class="font-display-lg text-display-lg text-secondary">342</p>
+<p class="font-caption text-caption text-on-surface-variant mt-base">Awaiting technical review</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-sm mb-base">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="clinical_notes">clinical_notes</span>
+<h3 class="font-label-md text-label-md text-on-surface-variant">In Investigation</h3>
+</div>
+<p class="font-display-lg text-display-lg text-tertiary-container">156</p>
+<p class="font-caption text-caption text-on-surface-variant mt-base">Field agents deployed</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant">
+<div class="flex items-center gap-sm mb-base">
+<span class="material-symbols-outlined text-surface-tint" data-icon="task_alt">task_alt</span>
+<h3 class="font-label-md text-label-md text-on-surface-variant">Resolved Cases</h3>
+</div>
+<p class="font-display-lg text-display-lg text-surface-tint">786</p>
+<p class="font-caption text-caption text-on-surface-variant mt-base">Successful enforcement</p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Complaint Table Section -->
+<section class="lg:col-span-2 space-y-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<div class="p-md border-b border-outline-variant flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-primary">Complaint Progress</h2>
+<div class="flex gap-base">
+<button class="flex items-center gap-xs px-3 py-1.5 bg-surface-container-low border border-outline-variant rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
+                                    Filter
+                                </button>
+<button class="flex items-center gap-xs px-3 py-1.5 bg-surface-container-low border border-outline-variant rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+                                    Export
+                                </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-md py-4 font-label-md text-label-md text-on-surface-variant">ID</th>
+<th class="px-md py-4 font-label-md text-label-md text-on-surface-variant">Category</th>
+<th class="px-md py-4 font-label-md text-label-md text-on-surface-variant">Region</th>
+<th class="px-md py-4 font-label-md text-label-md text-on-surface-variant">Status</th>
+<th class="px-md py-4 font-label-md text-label-md text-on-surface-variant">Priority</th>
+<th class="px-md py-4 font-label-md text-label-md text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-4 font-body-md text-body-md">#CF-2024-081</td>
+<td class="px-md py-4">
+<p class="font-label-md text-label-md text-on-surface">Illegal Logging</p>
+<p class="font-caption text-caption text-on-surface-variant">12 Oct 2024</p>
+</td>
+<td class="px-md py-4 font-body-md text-body-md">East Kalimantan</td>
+<td class="px-md py-4">
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-[12px]">New</span>
+</td>
+<td class="px-md py-4">
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[16px]" data-icon="priority_high" data-weight="fill">priority_high</span>
+<span class="font-label-md text-[12px]">High</span>
+</div>
+</td>
+<td class="px-md py-4 text-right">
+<button class="text-primary hover:underline font-label-md text-label-md">View Details</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-4 font-body-md text-body-md">#CF-2024-079</td>
+<td class="px-md py-4">
+<p class="font-label-md text-label-md text-on-surface">Waste Dumping</p>
+<p class="font-caption text-caption text-on-surface-variant">11 Oct 2024</p>
+</td>
+<td class="px-md py-4 font-body-md text-body-md">West Java</td>
+<td class="px-md py-4">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-[12px]">Verifying</span>
+</td>
+<td class="px-md py-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" data-icon="fiber_manual_record" data-weight="fill">fiber_manual_record</span>
+<span class="font-label-md text-[12px]">Medium</span>
+</div>
+</td>
+<td class="px-md py-4 text-right">
+<button class="text-primary hover:underline font-label-md text-label-md">View Details</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-4 font-body-md text-body-md">#CF-2024-075</td>
+<td class="px-md py-4">
+<p class="font-label-md text-label-md text-on-surface">Wildfire Threat</p>
+<p class="font-caption text-caption text-on-surface-variant">10 Oct 2024</p>
+</td>
+<td class="px-md py-4 font-body-md text-body-md">South Sumatra</td>
+<td class="px-md py-4">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-[12px]">Investigating</span>
+</td>
+<td class="px-md py-4">
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[16px]" data-icon="priority_high" data-weight="fill">priority_high</span>
+<span class="font-label-md text-[12px]">High</span>
+</div>
+</td>
+<td class="px-md py-4 text-right">
+<button class="text-primary hover:underline font-label-md text-label-md">View Details</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-4 font-body-md text-body-md">#CF-2024-068</td>
+<td class="px-md py-4">
+<p class="font-label-md text-label-md text-on-surface">Mining Spill</p>
+<p class="font-caption text-caption text-on-surface-variant">08 Oct 2024</p>
+</td>
+<td class="px-md py-4 font-body-md text-body-md">Central Sulawesi</td>
+<td class="px-md py-4">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-[12px]">Resolved</span>
+</td>
+<td class="px-md py-4">
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[16px]" data-icon="remove" data-weight="fill">remove</span>
+<span class="font-label-md text-[12px]">Low</span>
+</div>
+</td>
+<td class="px-md py-4 text-right">
+<button class="text-primary hover:underline font-label-md text-label-md">View Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-md bg-surface-container-low flex justify-between items-center">
+<span class="font-caption text-caption text-on-surface-variant">Showing 4 of 1,284 results</span>
+<div class="flex gap-xs">
+<button class="p-1 rounded border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-3 py-1 rounded border border-primary bg-primary-container text-on-primary-container font-label-md text-[12px]">1</button>
+<button class="px-3 py-1 rounded border border-outline-variant hover:bg-surface-container-high font-label-md text-[12px]">2</button>
+<button class="px-3 py-1 rounded border border-outline-variant hover:bg-surface-container-high font-label-md text-[12px]">3</button>
+<button class="p-1 rounded border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Widgets -->
+<aside class="space-y-md">
+<!-- Regional Distribution Map Widget -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<div class="p-md border-b border-outline-variant">
+<h2 class="font-label-md text-label-md text-primary">Regional Distribution</h2>
+<p class="font-caption text-caption text-on-surface-variant">Highest frequency regions</p>
+</div>
+<div class="h-48 relative bg-primary-fixed/20 flex items-center justify-center">
+<!-- Placeholder for actual Map, using a styled div -->
+<div class="absolute inset-0 opacity-40 grayscale" data-alt="A stylized minimalist map of the Indonesian archipelago rendered in tones of deep forest green and soft cream. The aesthetic is clean and modern with subtle glowing markers over regions like Kalimantan, Sumatra, and Java to indicate data points. The map avoids clutter, focusing on the geographical silhouette against a light, neutral background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgs6eM_rPvwCTC-5pizbaD9GLERi6fvzkJ174GM2aizjboXZ7Y7JAp9pitSds3E52--jHM--0lOuSczvu-qy2VrVlyvYmgaBIBe02rW_i-ezowXxxF6q3NbCH1_DDSvjSiXMa_OyFjttkbYjKP1roztiWrpbfURUKu1PaQ6xxpimk_4jWWOFdZH00DONlMZfvAbLVOjiBEujAkD0UvtGg3sSN-EUh4Ajr5p64ENKCMHiC67THoZ3flerRyiLxXuAsrryAYnsTDP0Y'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10 text-primary-container flex flex-col items-center">
+<span class="material-symbols-outlined text-[48px]" data-icon="map">map</span>
+<span class="font-caption text-caption font-bold">Interactive Map Data</span>
+</div>
+</div>
+<div class="p-md space-y-sm">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md">Kalimantan Timur</span>
+<span class="font-label-md text-label-md text-primary">24%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 24%"></div>
+</div>
+<div class="flex justify-between items-center pt-base">
+<span class="font-body-md text-body-md">Jawa Barat</span>
+<span class="font-label-md text-label-md text-primary">18%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 18%"></div>
+</div>
+<div class="flex justify-between items-center pt-base">
+<span class="font-body-md text-body-md">Sumatra Selatan</span>
+<span class="font-label-md text-label-md text-primary">15%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full">
+<div class="bg-primary h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+<!-- Recent Activity Chips -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-md">
+<h2 class="font-label-md text-label-md text-primary mb-md">Recent Verifications</h2>
+<div class="space-y-sm">
+<div class="flex gap-sm p-base rounded hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="edit_note">edit_note</span>
+</div>
+<div>
+<p class="font-label-md text-[12px] text-on-surface">#CF-2024-055 Updated</p>
+<p class="font-caption text-caption text-on-surface-variant">By Insp. Wahyudi • 2m ago</p>
+</div>
+</div>
+<div class="flex gap-sm p-base rounded hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="photo_camera">photo_camera</span>
+</div>
+<div>
+<p class="font-label-md text-[12px] text-on-surface">New Evidence Uploaded</p>
+<p class="font-caption text-caption text-on-surface-variant">#CF-2024-081 • 15m ago</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-md py-2 text-center font-label-md text-label-md text-primary hover:bg-primary-fixed/20 rounded transition-colors">
+                            View All Activity
+                        </button>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Contextual FAB for Dashboard -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary-container text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-50">
+<span class="material-symbols-outlined text-[28px]" data-icon="add">add</span>
+</button>
+</body></html>

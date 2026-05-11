@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffdcc3",
+                    "outline": "#717973",
+                    "secondary-fixed-dim": "#f3bb91",
+                    "secondary": "#7f5533",
+                    "on-secondary-fixed-variant": "#643e1e",
+                    "tertiary-fixed-dim": "#f5b7b4",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#ffc69b",
+                    "on-surface-variant": "#414844",
+                    "on-surface": "#191c1c",
+                    "primary": "#012d1d",
+                    "on-tertiary-container": "#d29895",
+                    "outline-variant": "#c1c8c2",
+                    "surface-container": "#edeeed",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#401b1b",
+                    "surface-container-high": "#e7e8e7",
+                    "on-secondary-container": "#7a502e",
+                    "surface-tint": "#3f6653",
+                    "on-primary-container": "#86af99",
+                    "surface-dim": "#d9dad9",
+                    "inverse-on-surface": "#f0f1f0",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f8",
+                    "primary-container": "#1b4332",
+                    "on-primary": "#ffffff",
+                    "surface": "#f9f9f8",
+                    "on-primary-fixed": "#002114",
+                    "inverse-primary": "#a5d0b9",
+                    "surface-container-highest": "#e1e3e2",
+                    "surface-bright": "#f9f9f8",
+                    "primary-fixed-dim": "#a5d0b9",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#274e3d",
+                    "on-secondary-fixed": "#2f1500",
+                    "primary-fixed": "#c1ecd4",
+                    "tertiary-fixed": "#ffdad8",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1c",
+                    "surface-container-low": "#f3f4f3",
+                    "on-tertiary-fixed-variant": "#673a39",
+                    "on-tertiary-fixed": "#331111",
+                    "surface-variant": "#e1e3e2",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3131",
+                    "tertiary-container": "#5a302f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "container-max": "1200px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Public Sans"],
+                    "label-md": ["Public Sans"],
+                    "caption": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "headline-lg-mobile": ["Public Sans"],
+                    "display-lg": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "headline-lg": ["Public Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-focus:focus {
+            border-color: #012d1d;
+            box-shadow: 0 0 0 4px rgba(165, 208, 185, 0.3);
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-[0px_4px_20px_rgba(1,45,29,0.08)] docked full-width top-0 z-50">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center h-20 px-gutter">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                KLHK Portal
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="index.html">Beranda</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim font-semibold pb-1 font-body-md" href="#">Lapor Keluhan</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="history_keluhan.html">Cek Status</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Regulasi</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Peta Konservasi</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-full">language</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-high transition-all p-2 rounded-full">notifications</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-md scale-95 active:opacity-80 transition-transform">Masuk CMS</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-gutter py-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+<!-- Left Column: Form Content -->
+<div class="lg:col-span-8">
+<div class="mb-lg">
+<h1 class="font-display-lg text-display-lg text-primary mb-sm">Lapor Keluhan</h1>
+<p class="text-on-surface-variant font-body-lg">Partisipasi Anda membantu kami menjaga kelestarian lingkungan Indonesia.</p>
+</div>
+<!-- Progress Indicator -->
+<div class="flex items-center mb-xl bg-surface-container-low p-6 rounded-xl border border-outline-variant">
+<div class="flex flex-1 items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+<div class="ml-4">
+<p class="font-label-md text-primary">Detail Laporan</p>
+<p class="text-caption text-on-surface-variant">Informasi kejadian</p>
+</div>
+</div>
+<div class="w-12 h-px bg-outline-variant mx-4"></div>
+<div class="flex flex-1 items-center opacity-50">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold">2</div>
+<div class="ml-4">
+<p class="font-label-md">Unggah Bukti</p>
+<p class="text-caption text-on-surface-variant">Foto &amp; Video</p>
+</div>
+</div>
+<div class="w-12 h-px bg-outline-variant mx-4"></div>
+<div class="flex flex-1 items-center opacity-50">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold">3</div>
+<div class="ml-4">
+<p class="font-label-md">Konfirmasi</p>
+<p class="text-caption text-on-surface-variant">Tinjau Laporan</p>
+</div>
+</div>
+</div>
+<!-- Form Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-[0px_4px_20px_rgba(1,45,29,0.08)]">
+<form class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Jenis Pelanggaran</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface">
+<option disabled="" selected="" value="">Pilih jenis pelanggaran</option>
+<option>Penebangan Liar (Illegal Logging)</option>
+<option>Kebakaran Hutan &amp; Lahan</option>
+<option>Pencemaran Limbah B3</option>
+<option>Perburuan Satwa Dilindungi</option>
+<option>Lainnya</option>
+</select>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Waktu Kejadian</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface" type="datetime-local"/>
+</div>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Lokasi Kejadian</label>
+<div class="relative rounded-xl border border-outline-variant bg-surface-container-high p-md group">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Provinsi</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface">
+<option disabled="" selected="" value="">Pilih Provinsi</option>
+</select>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Kota/Kabupaten</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface">
+<option disabled="" selected="" value="">Pilih Kota/Kabupaten</option>
+</select>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Kecamatan</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface">
+<option disabled="" selected="" value="">Pilih Kecamatan</option>
+</select>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Kelurahan</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface">
+<option disabled="" selected="" value="">Pilih Kelurahan</option>
+</select>
+</div>
+</div>
+<div class="space-y-base mt-md">
+<label class="font-label-md text-on-surface-variant">Alamat Lengkap</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface" placeholder="Masukkan detail alamat lokasi kejadian..." type="text"/>
+</div></div>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Deskripsi Detail</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 form-focus text-on-surface resize-none" placeholder="Jelaskan secara rinci kronologi kejadian yang Anda temukan..." rows="5"></textarea>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-on-surface-variant">Unggah Bukti (Foto/Video)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'opsz' 40">upload_file</span>
+</div>
+<p class="font-label-md text-on-surface">Seret dan lepas file di sini atau klik untuk memilih</p>
+<p class="text-caption text-on-surface-variant mt-2">Maks. 10MB per file (JPG, PNG, MP4)</p>
+</div>
+</div>
+<div class="pt-lg flex justify-end">
+<button class="bg-primary text-on-primary px-xl py-4 rounded-lg font-label-md hover:shadow-lg hover:opacity-90 transition-all" type="button">Lanjutkan Ke Konfirmasi</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Right Column: Sidebar info -->
+<div class="lg:col-span-4 space-y-md">
+<!-- Info Card 1: Process -->
+<div class="bg-primary-container text-on-primary-container rounded-xl p-lg shadow-sm border border-on-primary-fixed-variant">
+<h3 class="font-headline-md text-headline-md mb-md flex items-center">
+<span class="material-symbols-outlined mr-2">info</span>
+                        Proses Laporan
+                    </h3>
+<ul class="space-y-lg">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-on-primary-container mr-4">description</span>
+<div>
+<p class="font-label-md">Verifikasi Administrasi</p>
+<p class="text-caption opacity-80">Tim kami akan memeriksa kelengkapan data laporan Anda dalam 24 jam.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-on-primary-container mr-4">fact_check</span>
+<div>
+<p class="font-label-md">Investigasi Lapangan</p>
+<p class="text-caption opacity-80">Untuk kasus prioritas, tim teknis akan diterjunkan ke lokasi dalam 3-5 hari kerja.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-on-primary-container mr-4">gavel</span>
+<div>
+<p class="font-label-md">Tindak Lanjut Hukum</p>
+<p class="text-caption opacity-80">Pemberian sanksi administratif atau pidana bagi pelanggar sesuai regulasi.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Info Card 2: Response Time -->
+<div class="bg-surface-container-highest rounded-xl p-lg border border-outline-variant">
+<h3 class="font-label-md text-primary mb-sm">Estimasi Waktu Respon</h3>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg border border-outline-variant mb-md">
+<span class="font-body-md">Respon Awal</span>
+<span class="font-label-md text-primary">1 x 24 Jam</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg border border-outline-variant">
+<span class="font-body-md">Penyelesaian</span>
+<span class="font-label-md text-primary">14 Hari Kerja</span>
+</div>
+<p class="text-caption text-on-surface-variant mt-lg text-center">
+                        Butuh bantuan segera? Hubungi Hotline GAKKUM: <br/>
+<span class="font-bold text-primary">0800-1-500-600</span>
+</p>
+</div>
+<!-- Image Card -->
+<div class="rounded-xl overflow-hidden relative h-48 group cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene landscape of Indonesian mist-covered mountains and ancient rainforests during golden hour. The sunlight filters through heavy foliage, creating a majestic and protective mood. The photography style is high-resolution and professional, emphasizing the grandeur of natural conservation and the mission of environmental protection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL1Shg8ktv-Q3V04ArN5q7U59bvcKa1B02ww25DTM3vDtGaDbQ5kSNNs_11cOJWMjtb7Y0hcGcgg0XWEOc_Xi9SWH2J-VNv7bvqDpUtH787zakTxX0fVlPJRXT6boxzslsQRtqeGklGmx0jb5ZPBGRa-JxbSWDD-O0z6dt-gbkbYVvhC7ueskNJ19LpqaijaKRcHegdXMP8cvWxyTpyHlHQYnikIu8l3D2ofPXn1GUMmvRwaPiux1LLo0r3eHHf16lDfOMnCK77Sk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-md">
+<p class="text-on-primary font-label-md">Lihat Riwayat Laporan Terkini di Seluruh Indonesia</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed full-width mt-lg border-t border-on-primary-fixed-variant">
+<div class="max-w-[1200px] mx-auto py-lg px-gutter grid grid-cols-1 md:grid-cols-2 gap-md items-center">
+<div>
+<div class="font-headline-md text-headline-md text-on-primary mb-4">KLHK Portal</div>
+<p class="text-on-primary dark:text-primary-fixed opacity-90 font-caption">© 2024 Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors font-body-md" href="#">Kebijakan Privasi</a>
+<a class="text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors font-body-md" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors font-body-md" href="#">Kontak Kami</a>
+<a class="text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors font-body-md" href="#">Peta Situs</a>
+</div>
+</div>
+</footer>
+<script>
+    // I also fixed the "Masuk CMS" button link in the header of the keluhan page just in case.
+    document.querySelector('button.bg-primary.text-on-primary.px-6').addEventListener('click', function() {
+        window.location.href = 'pengaturan.html';
+    });
+</script>
+</body></html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reports &amp; Publications | MoEF CMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f9f9f8",
+                    "primary-fixed-dim": "#a5d0b9",
+                    "on-primary-container": "#86af99",
+                    "primary": "#012d1d",
+                    "on-primary-fixed": "#002114",
+                    "inverse-surface": "#2e3131",
+                    "on-tertiary-container": "#d29895",
+                    "on-secondary-container": "#7a502e",
+                    "on-tertiary-fixed": "#331111",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#a5d0b9",
+                    "tertiary-fixed": "#ffdad8",
+                    "secondary-fixed-dim": "#f3bb91",
+                    "surface": "#f9f9f8",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b4332",
+                    "surface-variant": "#e1e3e2",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#673a39",
+                    "on-background": "#191c1c",
+                    "surface-tint": "#3f6653",
+                    "on-secondary-fixed": "#2f1500",
+                    "surface-container-low": "#f3f4f3",
+                    "outline": "#717973",
+                    "inverse-on-surface": "#f0f1f0",
+                    "secondary-fixed": "#ffdcc3",
+                    "secondary": "#7f5533",
+                    "primary-fixed": "#c1ecd4",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#414844",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d9dad9",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1c",
+                    "surface-container-highest": "#e1e3e2",
+                    "surface-container-high": "#e7e8e7",
+                    "outline-variant": "#c1c8c2",
+                    "on-primary-fixed-variant": "#274e3d",
+                    "background": "#f9f9f8",
+                    "tertiary-container": "#5a302f",
+                    "on-secondary-fixed-variant": "#643e1e",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#401b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeeed",
+                    "secondary-container": "#ffc69b",
+                    "tertiary-fixed-dim": "#f5b7b4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "md": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["Public Sans"],
+                    "headline-lg-mobile": ["Public Sans"],
+                    "display-lg": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "caption": ["Public Sans"],
+                    "headline-lg": ["Public Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant flex flex-col py-md z-50">
+<div class="px-6 mb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary">MoEF Admin</h1>
+<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Official CMS Portal</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="article_manager.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                Article Manager
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="service_directory.html">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+                Service Directory
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="complaint_manager.html">
+<span class="material-symbols-outlined" data-icon="feedback">feedback</span>
+                Complaint Manager
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                Reports &amp; Publications
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="media_library.html">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+                Media Library
+            </a>
+</nav>
+<div class="px-4 mt-auto space-y-1">
+<button class="w-full mb-6 py-3 px-4 bg-primary text-white font-label-md text-label-md rounded-xl flex items-center justify-center gap-2 shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                Create New Article
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Kembali ke Menu Utama
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md rounded-lg" href="index.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Log Out
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="flex justify-between items-center px-gutter w-full sticky top-0 z-40 bg-surface-container-lowest h-16 shadow-sm">
+<div class="flex items-center gap-gutter flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary" placeholder="Search publications, reports, or IDs..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-surface-container-lowest"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant mx-2"></div>
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="text-right hidden sm:block">
+<p class="font-label-md text-label-md text-on-surface leading-none">Admin User</p>
+<p class="text-caption font-caption text-on-surface-variant">Administrator</p>
+</div>
+<img alt="Administrator profile" class="w-8 h-8 rounded-full bg-primary-fixed border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANb3F-HGI3vir51nB4Xmy74fd4F9jK6si5jR0Uz560dLNvlFbg_T3wm-m5HcorgyuVa-jgEcgZo1ICbryeQYQHVIeXJhLe2qdC5wSVnFdfPQD53WIikWC0oXOzK2ifvrFD0riPkfDujVuWnd7C21rYInmGRL99qKVNHIrpOkLER6HtfedhhXJPOQNiReUMkWpllfR93ChLjNGrQpVf-eYvP1_-fuSVx85fMjyVOMWTDQ6vs12tzuK8n87MzmOHG532nsWs9ONpLko"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-gutter max-w-container-max mx-auto w-full space-y-lg">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md">
+<div>
+<nav class="flex items-center gap-2 text-caption font-caption text-on-surface-variant mb-2">
+<span>CMS</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-semibold">Reports &amp; Publications</span>
+</nav>
+<h2 class="font-headline-lg text-headline-lg text-primary">Document Management</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage official ministry reports, research publications, and environmental policies.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-3 border border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                        Filter View
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-white font-label-md text-label-md rounded-lg hover:opacity-90 transition-opacity shadow-sm">
+<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
+                        Upload New Document
+                    </button>
+</div>
+</div>
+<!-- Dashboard Stats / Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="description">description</span>
+<span class="text-display-lg font-display-lg text-primary leading-tight">1,284</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Total Documents</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="visibility">visibility</span>
+<span class="text-display-lg font-display-lg text-secondary leading-tight">842</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Public Access</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<span class="material-symbols-outlined text-tertiary-container mb-2" data-icon="pending_actions">pending_actions</span>
+<span class="text-display-lg font-display-lg text-tertiary-container leading-tight">12</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Pending Review</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<span class="material-symbols-outlined text-on-primary-container mb-2" data-icon="cloud_done">cloud_done</span>
+<span class="text-display-lg font-display-lg text-on-primary-container leading-tight">98%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Cloud Uptime</span>
+</div>
+</div>
+<!-- Main Management Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Document List (Table Style Card) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<div class="p-gutter border-b border-outline-variant flex justify-between items-center bg-surface-container-low/50">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Publications</h3>
+<div class="flex gap-2">
+<button class="p-2 text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="grid_view">grid_view</span></button>
+<button class="p-2 text-primary border-b-2 border-primary"><span class="material-symbols-outlined" data-icon="reorder">reorder</span></button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/30 border-b border-outline-variant">
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface-variant">Document Name</th>
+<th class="px- gutter py-4 font-label-md text-label-md text-on-surface-variant">Type</th>
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface-variant">Upload Date</th>
+<th class="px-gutter py-4 font-label-md text-label-md text-on-surface-variant">Visibility</th>
+<th class="px-gutter py-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-gutter py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Annual Conservation Report 2023.pdf</p>
+<p class="text-caption font-caption text-on-surface-variant">24.5 MB • ID: DOC-2023-001</p>
+</div>
+</div>
+</td>
+<td class="px-gutter py-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-caption font-label-md uppercase tracking-wider">Report</span>
+</td>
+<td class="px-gutter py-4 font-body-md text-body-md text-on-surface-variant">Oct 12, 2023</td>
+<td class="px-gutter py-4">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="public">public</span>
+                                            Public
+                                        </div>
+</td>
+<td class="px-gutter py-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-gutter py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="article">article</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Renewable Energy Strategy.docx</p>
+<p class="text-caption font-caption text-on-surface-variant">1.2 MB • ID: DOC-2023-042</p>
+</div>
+</div>
+</td>
+<td class="px-gutter py-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-caption font-label-md uppercase tracking-wider">Strategy</span>
+</td>
+<td class="px-gutter py-4 font-body-md text-body-md text-on-surface-variant">Nov 05, 2023</td>
+<td class="px-gutter py-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
+                                            Internal
+                                        </div>
+</td>
+<td class="px-gutter py-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-gutter py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error" data-icon="picture_as_pdf">picture_as_pdf</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Peatland Restoration Guideline.pdf</p>
+<p class="text-caption font-caption text-on-surface-variant">8.9 MB • ID: DOC-2023-089</p>
+</div>
+</div>
+</td>
+<td class="px-gutter py-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-caption font-label-md uppercase tracking-wider">Policy</span>
+</td>
+<td class="px-gutter py-4 font-body-md text-body-md text-on-surface-variant">Nov 18, 2023</td>
+<td class="px-gutter py-4">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="public">public</span>
+                                            Public
+                                        </div>
+</td>
+<td class="px-gutter py-4 text-right">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-gutter border-t border-outline-variant flex justify-between items-center bg-surface-container-low/20">
+<p class="text-caption font-caption text-on-surface-variant">Showing 1-10 of 1,284 results</p>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-outline hover:bg-surface-container-low"><span class="material-symbols-outlined text-[18px]" data-icon="chevron_left">chevron_left</span></button>
+<button class="w-8 h-8 rounded bg-primary text-white flex items-center justify-center text-label-md font-label-md">1</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low font-label-md">2</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low font-label-md">3</button>
+<button class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center text-outline hover:bg-surface-container-low"><span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+</div>
+<!-- Right Sidebar (Upload Area & Categories) -->
+<div class="space-y-gutter">
+<!-- Upload Dropzone Card -->
+<div class="bg-surface-container-lowest rounded-xl border-2 border-dashed border-outline-variant p-gutter text-center shadow-sm hover:border-primary transition-colors group cursor-pointer">
+<div class="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-fixed text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">Upload Document</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">Drag and drop files here, or click to browse</p>
+<p class="text-caption font-caption text-outline mt-1 italic">Maximum file size: 50MB (PDF, DOCX, XLS)</p>
+</div>
+<!-- Storage Usage Card -->
+<div class="bg-primary text-white rounded-xl p-gutter shadow-lg overflow-hidden relative">
+<div class="absolute top-0 right-0 p-gutter opacity-10 scale-150">
+<span class="material-symbols-outlined text-[120px]" data-icon="database">database</span>
+</div>
+<h4 class="font-label-md text-label-md uppercase tracking-wider opacity-80 mb-4">Cloud Storage Usage</h4>
+<div class="flex items-end justify-between mb-2">
+<span class="text-headline-lg font-headline-lg">1.4 TB</span>
+<span class="text-caption font-caption opacity-80">of 2 TB</span>
+</div>
+<div class="w-full bg-white/20 h-2 rounded-full mb-4">
+<div class="bg-primary-fixed-dim h-full w-[70%] rounded-full shadow-sm"></div>
+</div>
+<button class="w-full py-2 bg-white/10 hover:bg-white/20 text-white font-label-md text-label-md rounded-lg transition-colors border border-white/20">
+                             Manage Storage
+                         </button>
+</div>
+<!-- Categories Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-gutter">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-gutter">Top Categories</h4>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-2 hover:bg-surface-container-low rounded-lg cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-md text-body-md text-on-surface">Conservation Reports</span>
+</div>
+<span class="text-caption font-caption text-on-surface-variant">428</span>
+</div>
+<div class="flex items-center justify-between p-2 hover:bg-surface-container-low rounded-lg cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-md text-body-md text-on-surface">Policy Frameworks</span>
+</div>
+<span class="text-caption font-caption text-on-surface-variant">215</span>
+</div>
+<div class="flex items-center justify-between p-2 hover:bg-surface-container-low rounded-lg cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span class="font-body-md text-body-md text-on-surface">Spatial Data Maps</span>
+</div>
+<span class="text-caption font-caption text-on-surface-variant">156</span>
+</div>
+<div class="flex items-center justify-between p-2 hover:bg-surface-container-low rounded-lg cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-body-md text-body-md text-on-surface">Audit Publications</span>
+</div>
+<span class="text-caption font-caption text-on-surface-variant">84</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Promotion / Feature Card -->
+<section class="bg-surface-container-high rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row items-center">
+<div class="flex-1 p-gutter lg:p-xl">
+<span class="px-3 py-1 bg-primary text-white text-caption font-label-md rounded mb-4 inline-block">NEW FEATURE</span>
+<h3 class="font-display-lg text-headline-lg md:text-display-lg text-primary mb-4">Advanced Document AI</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Our new AI integration now automatically tags, summarizes, and classifies uploaded PDF reports into ministry-standard categories with 94% accuracy.</p>
+<button class="px-8 py-4 bg-primary text-white font-label-md text-label-md rounded-xl hover:opacity-90 transition-opacity">
+                        Configure AI Settings
+                    </button>
+</div>
+<div class="w-full md:w-1/3 h-64 md:h-full relative overflow-hidden">
+<img alt="Advanced digital server room" class="w-full h-full object-cover" data-alt="A professional high-tech server room with glowing green status lights reflecting off polished dark floors. The aesthetic is modern institutionalism with deep forest green hues and clean linear perspective. Soft atmospheric fog and clinical blue highlights create a sophisticated digital infrastructure environment that feels secure and powerful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACH-JkIcka_4a4U4uCyFbI68srdhP28XajGm8tG4zvw-YEaYn1Q3Nwuhu2_D0zt1ZUCbuVdfID7An1phOce1TvkYCFaQYhbMGJWfJCQRjPUAfSSBuvURPzwvXQTDSV1ZQ365TPnbh5LQBGWqfx9z35Su0PTBYloQTA29G5ZtYMDkztRBEPL_m-ctb5xgL2fPrp-20xljT_1NGS1iTbRol-VHhWnAvuSUA4gSAzqZzJ1EMww8mTpeQiFtLqlWzmlxMCVq7l2h6wNbI"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-outline-variant bg-surface-container-lowest py-8">
+<div class="px-gutter flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-6">
+<span class="font-label-md text-label-md text-on-surface-variant">© 2024 Ministry of Environment and Forestry</span>
+<a class="text-caption font-caption text-outline hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-caption font-caption text-outline hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-caption font-caption text-outline">Powered by MoEF Digital Systems</span>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></div>
+<span class="text-[10px] font-bold text-primary-fixed-dim uppercase tracking-tighter">System Online</span>
+</div>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

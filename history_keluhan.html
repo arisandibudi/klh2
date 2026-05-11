@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#7f5533",
+                        "background": "#f9f9f8",
+                        "outline": "#717973",
+                        "tertiary-fixed": "#ffdad8",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#5a302f",
+                        "surface-container-high": "#e7e8e7",
+                        "surface-dim": "#d9dad9",
+                        "tertiary": "#401b1b",
+                        "primary": "#012d1d",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9f8",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "secondary-container": "#ffc69b",
+                        "surface-container": "#edeeed",
+                        "on-surface-variant": "#414844",
+                        "on-primary-container": "#86af99",
+                        "inverse-primary": "#a5d0b9",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "inverse-surface": "#2e3131",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdcc3",
+                        "surface-variant": "#e1e3e2",
+                        "surface-container-highest": "#e1e3e2",
+                        "tertiary-fixed-dim": "#f5b7b4",
+                        "outline-variant": "#c1c8c2",
+                        "on-tertiary-fixed": "#331111",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "on-tertiary-container": "#d29895",
+                        "surface-tint": "#3f6653",
+                        "surface": "#f9f9f8",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1b4332",
+                        "on-tertiary-fixed-variant": "#673a39",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f4f3",
+                        "on-primary-fixed": "#002114",
+                        "inverse-on-surface": "#f0f1f0",
+                        "on-background": "#191c1c",
+                        "primary-fixed": "#c1ecd4",
+                        "on-secondary-container": "#7a502e",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "on-surface": "#191c1c",
+                        "on-secondary-fixed": "#2f1500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "container-max": "1200px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "caption": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "body-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 z-50 border-b border-outline-variant dark:border-outline shadow-[0px_4px_20px_rgba(1,45,29,0.08)]">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center h-20 px-gutter">
+<div class="flex items-center gap-md">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">KLHK Portal</div>
+</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="index.html">Beranda</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="keluhan.html">Lapor Keluhan</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim font-semibold pb-1" href="history_keluhan.html">Cek Status</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Regulasi</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Peta Konservasi</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined p-2 text-on-surface hover:bg-surface-container-high transition-all" data-icon="language">language</button>
+<button class="material-symbols-outlined p-2 text-on-surface hover:bg-surface-container-high transition-all" data-icon="notifications">notifications</button>
+<button class="ml-sm bg-primary text-on-primary px-md py-2 font-label-md text-label-md rounded-lg scale-95 active:opacity-80 transition-transform" onclick="window.location.href='pengaturan.html'">Masuk CMS</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-gutter py-xl">
+<!-- Breadcrumbs & Title -->
+<nav class="mb-md">
+<ol class="flex items-center gap-xs font-caption text-caption text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="index.html">Beranda</a></li>
+<li class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</li>
+<li class="text-primary font-semibold">Riwayat Pengaduan</li>
+</ol>
+</nav>
+<h1 class="font-display-lg text-display-lg text-primary mb-xl">Riwayat Pengaduan Saya</h1>
+<!-- Section 1: Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-md border border-[#E1E8E4] rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.06)] flex items-center gap-md">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="description">description</span>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Total Pengaduan</p>
+<p class="font-headline-lg text-headline-lg text-primary">24</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-md border border-[#E1E8E4] rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.06)] flex items-center gap-md">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="hourglass_empty">hourglass_empty</span>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Dalam Proses</p>
+<p class="font-headline-lg text-headline-lg text-primary">03</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-md border border-[#E1E8E4] rounded-xl shadow-[0px_4px_20px_rgba(27,67,50,0.06)] flex items-center gap-md">
+<div class="w-14 h-14 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed-variant text-3xl" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Selesai</p>
+<p class="font-headline-lg text-headline-lg text-primary">21</p>
+</div>
+</div>
+</div>
+<!-- Section 2: Complaints List -->
+<div class="space-y-md">
+<!-- Complaint Item 1 -->
+<div class="group bg-surface-container-lowest border border-[#E1E8E4] rounded-xl p-gutter hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex-1 space-y-sm">
+<div class="flex flex-wrap items-center gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-sm py-1 rounded">#CF-2024-081</span>
+<span class="font-caption text-caption text-outline">12 Agustus 2024</span>
+<span class="inline-flex items-center px-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="forest">forest</span>
+                                Penebangan Liar
+                            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Laporan Penebangan Liar di Kawasan Lindung Meratus</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 max-w-3xl">
+                            Ditemukan aktivitas penebangan pohon tanpa izin di koordinat -3.1234, 115.5678. Terlihat beberapa truk pengangkut kayu keluar masuk kawasan lindung pada jam malam...
+                        </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-md shrink-0">
+<div class="bg-secondary-fixed text-on-secondary-container px-md py-1.5 rounded-full font-label-md text-label-md flex items-center">
+<span class="material-symbols-outlined text-[18px] mr-1" data-icon="search_check">search_check</span>
+                            Investigasi
+                        </div>
+<button class="w-full md:w-auto px-lg py-3 border border-primary text-primary font-label-md text-label-md rounded hover:bg-primary hover:text-on-primary transition-all">Lihat Detail</button>
+</div>
+</div>
+</div>
+<!-- Complaint Item 2 -->
+<div class="group bg-surface-container-lowest border border-[#E1E8E4] rounded-xl p-gutter hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex-1 space-y-sm">
+<div class="flex flex-wrap items-center gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-sm py-1 rounded">#CF-2024-075</span>
+<span class="font-caption text-caption text-outline">05 Agustus 2024</span>
+<span class="inline-flex items-center px-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="factory">factory</span>
+                                Pencemaran Sungai
+                            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Pembuangan Limbah Cair Industri ke Aliran Sungai Citarum</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 max-w-3xl">
+                            Air sungai berubah warna menjadi kehitaman dan mengeluarkan bau menyengat di wilayah sekitar pabrik tekstil. Hal ini sangat mengganggu ekosistem lokal dan warga sekitar...
+                        </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-md shrink-0">
+<div class="bg-primary text-on-primary px-md py-1.5 rounded-full font-label-md text-label-md flex items-center">
+<span class="material-symbols-outlined text-[18px] mr-1" data-icon="task_alt">task_alt</span>
+                            Selesai
+                        </div>
+<button class="w-full md:w-auto px-lg py-3 border border-primary text-primary font-label-md text-label-md rounded hover:bg-primary hover:text-on-primary transition-all">Lihat Detail</button>
+</div>
+</div>
+</div>
+<!-- Complaint Item 3 -->
+<div class="group bg-surface-container-lowest border border-[#E1E8E4] rounded-xl p-gutter hover:shadow-[0px_8px_30px_rgba(27,67,50,0.12)] transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex-1 space-y-sm">
+<div class="flex flex-wrap items-center gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-sm py-1 rounded">#CF-2024-062</span>
+<span class="font-caption text-caption text-outline">28 Juli 2024</span>
+<span class="inline-flex items-center px-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="pets">pets</span>
+                                Perdagangan Satwa
+                            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Penjualan Burung Langka Dilindungi di Pasar Lokal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 max-w-3xl">
+                            Terpantau adanya transaksi jual beli burung Kakaktua Jambul Kuning dan Cendrawasih di pasar unggas tanpa dokumen resmi yang sah. Mohon segera ditindaklanjuti...
+                        </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-md shrink-0">
+<div class="bg-surface-variant text-on-surface-variant px-md py-1.5 rounded-full font-label-md text-label-md flex items-center">
+<span class="material-symbols-outlined text-[18px] mr-1" data-icon="verified">verified</span>
+                            Verifikasi
+                        </div>
+<button class="w-full md:w-auto px-lg py-3 border border-primary text-primary font-label-md text-label-md rounded hover:bg-primary hover:text-on-primary transition-all">Lihat Detail</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Placeholder -->
+<div class="mt-xl flex justify-center items-center gap-sm">
+<button class="material-symbols-outlined p-2 border border-outline-variant rounded hover:bg-surface-container transition-colors" data-icon="chevron_left">chevron_left</button>
+<button class="w-10 h-10 bg-primary text-on-primary font-label-md text-label-md rounded">1</button>
+<button class="w-10 h-10 hover:bg-surface-container font-label-md text-label-md rounded">2</button>
+<button class="w-10 h-10 hover:bg-surface-container font-label-md text-label-md rounded">3</button>
+<button class="material-symbols-outlined p-2 border border-outline-variant rounded hover:bg-surface-container transition-colors" data-icon="chevron_right">chevron_right</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed full-width mt-lg border-t border-on-primary-fixed-variant">
+<div class="max-w-[1200px] mx-auto py-lg px-gutter grid grid-cols-1 md:grid-cols-2 gap-md items-center">
+<div class="space-y-sm">
+<div class="font-headline-md text-headline-md text-on-primary">KLHK Portal</div>
+<p class="font-caption text-caption text-on-primary dark:text-primary-fixed">© 2024 Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia</p>
+</div>
+<div class="flex flex-wrap md:justify-end gap-md">
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">Kontak Kami</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">Peta Situs</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MoEF CMS - Media Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f9f9f8",
+                    "primary-fixed-dim": "#a5d0b9",
+                    "on-primary-container": "#86af99",
+                    "primary": "#012d1d",
+                    "on-primary-fixed": "#002114",
+                    "inverse-surface": "#2e3131",
+                    "on-tertiary-container": "#d29895",
+                    "on-secondary-container": "#7a502e",
+                    "on-tertiary-fixed": "#331111",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#a5d0b9",
+                    "tertiary-fixed": "#ffdad8",
+                    "secondary-fixed-dim": "#f3bb91",
+                    "surface": "#f9f9f8",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b4332",
+                    "surface-variant": "#e1e3e2",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#673a39",
+                    "on-background": "#191c1c",
+                    "surface-tint": "#3f6653",
+                    "on-secondary-fixed": "#2f1500",
+                    "surface-container-low": "#f3f4f3",
+                    "outline": "#717973",
+                    "inverse-on-surface": "#f0f1f0",
+                    "secondary-fixed": "#ffdcc3",
+                    "secondary": "#7f5533",
+                    "primary-fixed": "#c1ecd4",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#414844",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d9dad9",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1c",
+                    "surface-container-highest": "#e1e3e2",
+                    "surface-container-high": "#e7e8e7",
+                    "outline-variant": "#c1c8c2",
+                    "on-primary-fixed-variant": "#274e3d",
+                    "background": "#f9f9f8",
+                    "tertiary-container": "#5a302f",
+                    "on-secondary-fixed-variant": "#643e1e",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#401b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeeed",
+                    "secondary-container": "#ffc69b",
+                    "tertiary-fixed-dim": "#f5b7b4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "md": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["Public Sans"],
+                    "headline-lg-mobile": ["Public Sans"],
+                    "display-lg": ["Public Sans"],
+                    "headline-md": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "body-lg": ["Public Sans"],
+                    "caption": ["Public Sans"],
+                    "headline-lg": ["Public Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="w-64 h-screen fixed left-0 top-0 flex flex-col h-full py-md border-r border-outline-variant bg-surface-container-low dark:bg-inverse-surface z-50">
+<div class="px-6 mb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim">MoEF Admin</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">Official CMS Portal</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="article_manager.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-md text-label-md">Article Manager</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="service_directory.html">
+<span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
+<span class="font-label-md text-label-md">Service Directory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="complaint_manager.html">
+<span class="material-symbols-outlined" data-icon="feedback">feedback</span>
+<span class="font-label-md text-label-md">Complaint Manager</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="reports.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Reports &amp; Publications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+<span class="font-label-md text-label-md">Media Library</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-1">
+<button class="w-full mb-6 bg-primary text-on-primary py-3 px-4 rounded-lg font-label-md flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Create New Article
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Kembali ke Menu Utama</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="pengaturan.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="index.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Log Out</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-gutter w-full sticky top-0 z-40 bg-surface-container-lowest h-16 shadow-sm dark:shadow-none ml-64 w-[calc(100%-16rem)]">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container text-body-md font-body-md pl-10 pr-4 py-2 border-none rounded-full focus:ring-2 focus:ring-primary" placeholder="Search media assets..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="help">help</button>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface leading-tight">Admin User</p>
+<p class="font-caption text-caption text-on-surface-variant">Administrator</p>
+</div>
+<img alt="Administrator profile" class="w-10 h-10 rounded-full bg-primary-fixed border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzT2Bu-xjiyvHuTFyZPmqqJzADyEvt8SltleC08d5xtZKnMSZA7D__K8cZJSjwi6j3tVi0K_yz8ptSTNMPPVb5qllV3BwkqkfP-oxWnCyPZASnvVj_2B91deDiGpBXshn8Al_GuiliXyDoTSEm3WRbiQwdbuW17v6ITOLlNaMvb7y0Yon8cCI1g5wWDhOUhxNn9Zb2cvv5cSQPOXw1-Sb9ZuqTC6Mt9eB0Kuu58SFNTu6FeIajnu0YRsyNl1yPK5dC5373divrE8I"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-gutter bg-surface min-h-[calc(100vh-64px)] flex gap-gutter">
+<!-- Media Canvas -->
+<div class="flex-1">
+<!-- Toolbar -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">Media Library</h2>
+<div class="flex bg-surface-container rounded-lg p-1">
+<button class="p-2 bg-surface-container-lowest rounded shadow-sm text-primary">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="list">list</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline text-primary font-label-md rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="create_new_folder">create_new_folder</span>
+                        New Folder
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2 bg-primary text-on-primary font-label-md rounded-lg shadow-sm hover:shadow-md transition-all">
+<span class="material-symbols-outlined" data-icon="upload">upload</span>
+                        Upload
+                    </button>
+</div>
+</div>
+<!-- Breadcrumbs / Filter -->
+<div class="flex items-center gap-2 mb-6 text-on-surface-variant">
+<span class="font-label-md">All Assets</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-label-md text-primary font-bold">Conservation Areas</span>
+</div>
+<!-- Folders Section -->
+<div class="grid grid-cols-4 gap-4 mb-8">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant flex items-center gap-4 hover:shadow-sm transition-all cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+<div>
+<p class="font-label-md text-on-surface">Sumatra Forests</p>
+<p class="font-caption text-on-surface-variant">248 items</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant flex items-center gap-4 hover:shadow-sm transition-all cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+<div>
+<p class="font-label-md text-on-surface">Marine Life</p>
+<p class="font-caption text-on-surface-variant">156 items</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant flex items-center gap-4 hover:shadow-sm transition-all cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+<div>
+<p class="font-label-md text-on-surface">Policy Graphics</p>
+<p class="font-caption text-on-surface-variant">89 items</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant flex items-center gap-4 hover:shadow-sm transition-all cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+<div>
+<p class="font-label-md text-on-surface">Archives</p>
+<p class="font-caption text-on-surface-variant">1.2k items</p>
+</div>
+</div>
+</div>
+<!-- Asset Grid -->
+<div class="grid grid-cols-4 gap-gutter">
+<!-- Asset Card Active -->
+<div class="group relative bg-surface-container-lowest rounded-xl border-2 border-primary overflow-hidden shadow-md">
+<div class="aspect-square bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution photograph of a lush Indonesian rainforest canopy, showcasing vibrant green foliage and misty mountains in the distance. The lighting is soft and natural, emphasizing the rich textures of the tropical ecosystem. This image is part of the MoEF CMS media library, maintaining a professional and conservation-focused aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4RwjYFyPoKThstFLMysAqQKrgh-FlrldRKZMfAae-oxbSRpwaMAyckoFAd3BiIvS0SApfbt3wgly6HohhHzJtSMwOWcd909g04d4RHkEaYhUCKRHL7g0u7RwgGo3eAul2MrMe1A5FkzesuycmcB1ohEGK0Cl8ws4IxNUFZsnS-NnJUZyVYV9ITl_tHMJ72XoiQDj95wJZMTobHSSq9gR35H-R47M0kciFz0_27q0OPjwmQb8woSPIaZevpO5tqfK6IfJYgzDJngU"/>
+<div class="absolute top-2 right-2 h-6 w-6 bg-primary rounded-full flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">sumatra-rainforest-01.jpg</p>
+<p class="font-caption text-on-surface-variant">2.4 MB • 4500x3000</p>
+</div>
+</div>
+<!-- Asset Card -->
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed macro photograph of a coral reef with diverse marine biodiversity, including various species of colorful corals and small tropical fish. The underwater lighting is clear and bright, highlighting the pristine nature of the marine environment. The visual style is crisp and modern, reflecting the institutional quality of the ministry's digital archives." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXCz0MbxTJWB8c7znlqlb8MImOIgTiaRzHi0oe2aVQ_XQRDVq9vL98jku5RVvj6GJSqDL2v9M0g90ajrCPG9Exc61cZzd10HfkRQboFC8SWkSnGEZRkOnKZjFckGSeeWkUFM-5wbAj837pUf6HmS9noFv_YbOP6b0qnVeqp7P96SIgDRBDQDdvDkJ70kT7iTHm1eG84uJTO7-mVSaC-QxlsrhBPa7-D6NALnAzD2HY1aa4_16YTdPUJ3x6g2L21pX75guC_Uyoynw"/>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">marine-protected-area.png</p>
+<p class="font-caption text-on-surface-variant">1.8 MB • 3200x2400</p>
+</div>
+</div>
+<!-- Asset Card -->
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide-angle landscape shot of Mount Bromo during sunrise, with thick clouds settled in the valley and the sun casting a golden glow on the volcanic peaks. The atmosphere is majestic and serene, using a professional color palette dominated by deep greens and earthy browns. The composition is balanced and authoritative, suitable for official government documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApr6-d8i7aDq6YWgHvlZlRShfIEeU06DC_9pzFmbmZUABJVyTtLftKaPkaX19at37FImpzLVSmfSBpJ6P_1r9g-Cle5WvSp1PIHjd-IQ5Rs_R1ES87xNPfzkkesctGmY96R5MZIP6mwoEat1kEnhvPR6CVpQSTqK2pP4Zz_THjm9_o8PGV2tMSEuxvy4C_G18KJ1NjLAtoQ9acNG111h8MsSxNQUPtS_YtGhSqsHUQ1ZlJ1ecRYJbHSOLWijALvTJ6D_CxXsdK4bU"/>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">mount-bromo-expedition.jpg</p>
+<p class="font-caption text-on-surface-variant">3.1 MB • 5200x3400</p>
+</div>
+</div>
+<!-- Asset Card -->
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional studio photo of laboratory equipment used for environmental testing, including clear vials and scientific instruments. The background is a clean, neutral white, creating a clinical and trustworthy aesthetic. The lighting is even and bright, emphasizing precision and transparency in the ministry's scientific research and monitoring efforts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlknw_anWLwVnWFFOJoFWaV1COyaSGRBcpSUxsH8NKSFCh8m86wU5EcxDUBv3HCUwg4D8icOxlbyALFOQZwNlgYbKJycDdmmbzu1CloilL6tMw6PTuI66wsvpFuI4uHpuBEoS2tecVkHEM-gxJ67Oe6M5PSncsN42Y_NngNxDQpLImEQNIHJpWe0Kz8XE_sT_R9kqeSgqlk701Q9NYSNmrgx0u9ESmGDJq9E6Oahth5EtlCThZS8RloDHwhR-fyJ95r6hDsB3SBvg"/>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">lab-testing-samples.jpg</p>
+<p class="font-caption text-on-surface-variant">980 KB • 2000x2000</p>
+</div>
+</div>
+<!-- More assets for grid density -->
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A lush panoramic view of a terraced rice field in Indonesia, captured during the golden hour with soft sunlight filtering through the clouds. The vibrant green terraces create a rhythmic pattern across the landscape. The mood is tranquil and stable, representing the successful management of natural resources and environmental stewardship by the government." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaV1jySSVrH5qkjlTTxAx1bRK3m3l-5V5vI_MftVLgmSAtjL7DNaGhoCH7D9_5dKBimB0jx7nJIjrunT02avXeicf3w6WaY82n1nJMKpQhnyU43033ucFlVAK2POCnjsI-LfKRH8CqktOFj_dC7wTQflqCWeX-UGV_zcTFaUx9OLWp7SPBget-KBafr2ZhB2dNkorxJB07jdTMWmdhqjx5ZmyLpNMHduoqXL12gSCNeg-93J3a8fDIufx6Psgnf9tRBHJonhsZStw"/>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">terraced-landscape.jpg</p>
+<p class="font-caption text-on-surface-variant">4.5 MB • 6000x4000</p>
+</div>
+</div>
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A misty forest interior with tall, ancient trees and light beams breaking through the dense canopy, illuminating the mossy ground. The color palette is dominated by deep forest greens and cool greys, creating a sense of wonder and importance. The visual style is high-end and cinematic, aligning with the ministry's prestigious branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ1kZ6dISO8iMi02GC0Y0NjuAP6U2_WAQP3q2dLHNTrkgzaHbN-LyeEQUu4ugcCPexSuCOYVIdSY1T86_zAI7svNq5ef4IeXXsE2keKJg_oIDZPf-HSD-o9KBFJbxnloBnW_U756VcoN0AFk7aH-C_SnifRum1x_WOhXH4QhNZlabYN2XSih7_dU0S-GCuyyr1Oj-O18qEdynwQnhlGsDTE1VsYLScZOpmscZvUktwtfzVlyOcU6euffKxBv_3BPEbZq3Mm_HhoCU"/>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">misty-forest-interior.png</p>
+<p class="font-caption text-on-surface-variant">2.2 MB • 3840x2160</p>
+</div>
+</div>
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden flex items-center justify-center text-primary bg-primary-fixed">
+<span class="material-symbols-outlined text-6xl" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">annual-report-2023.pdf</p>
+<p class="font-caption text-on-surface-variant">12.5 MB • 48 Pages</p>
+</div>
+</div>
+<div class="group relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-md transition-all cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A breathtaking view of a wide valley with a river winding through it, surrounded by forested hills under a dramatic sky. The lighting is high-contrast, creating deep shadows and bright highlights that emphasize the rugged beauty of the terrain. The aesthetic is clean and authoritative, perfect for high-level environmental communications." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtfbyr4rrq6XB9xk5rVQGp9YXZfcdJRyscZplPuE5CQmSxOiEgNf8GbmxwDid3p_C2fQ-ymZxOSUtBcMKUx6OtVVrsu_GFdBeW-MOyRao28kpTyzyPAYytHeL39jcnDyNnmuIDKK0h--u7ncj_MbeRhAFfhFxpyupWLmMvK0dR-uERxBnIQT7GXolrZo2pNrhuaGc3Pr18e5hQmO19JTJAa6Tr-Bssp0G0zv0geSbysk2cT5RYk9hi0CKjrxLzhf0OXJdJsgqSB5w"/>
+</div>
+<div class="p-3">
+<p class="font-label-md text-on-surface truncate">river-basin-survey.jpg</p>
+<p class="font-caption text-on-surface-variant">5.6 MB • 7200x4800</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Sidebar -->
+<aside class="w-80 bg-surface-container-lowest border border-outline-variant rounded-2xl p-6 h-[calc(100vh-120px)] sticky top-20 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-label-md text-label-md text-primary">Asset Details</h3>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-error" data-icon="delete">delete</button>
+</div>
+<div class="rounded-lg overflow-hidden mb-6 border border-outline-variant">
+<img class="w-full h-40 object-cover" data-alt="A zoomed-in preview of a rainforest canopy showing detailed leaf patterns and varied shades of green. The lighting is dappled, with sunlight spots creating points of interest. This professional preview thumbnail is used within the CMS sidebar to represent high-resolution environmental photography for the MoEF." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfAK_596N1vPOklpVfwk-MTVb45u8-_h69D7x1qU3H913wCZgxvLLFhWixt3a2fn9_qvxXnPooGB5B5pSJy9WtIGMoX_h92ge73ta0wziz1I53CGS-YMOigPKJ2VloAvnesL2cRGMURlmwxtmeascLvQP0obgT6Ju66nB23-QTRURUkn8A-rsMaHFZHNgexOEUFGcty7PyDGIEDOkszglsxmx1uerYC4qwIUe8vnlV6LxyZH1HTQbeSKLHIX4kkafrBx8ZC7iIEww"/>
+</div>
+<div class="space-y-6">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-2">File Name</label>
+<input class="w-full font-body-md text-on-surface border border-outline-variant rounded-lg px-3 py-2 focus:border-primary focus:ring-0" type="text" value="sumatra-rainforest-01.jpg"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-2">Alt Text</label>
+<textarea class="w-full font-body-md text-on-surface border border-outline-variant rounded-lg px-3 py-2 h-24 focus:border-primary focus:ring-0">High-resolution view of North Sumatra's primary rainforest canopy during peak moisture season.</textarea>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1">Size</label>
+<p class="font-body-md text-on-surface">2.4 MB</p>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-1">Dimensions</label>
+<p class="font-body-md text-on-surface">4500 x 3000</p>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface-variant mb-2">Public URL</label>
+<div class="flex gap-2">
+<input class="flex-1 font-body-md text-on-surface-variant bg-surface-container border border-outline-variant rounded-lg px-3 py-2 overflow-hidden" readonly="" type="text" value="https://cdn.moef.go.id/media/129381..."/>
+<button class="material-symbols-outlined p-2 border border-outline-variant rounded-lg hover:bg-surface-container-high transition-colors" data-icon="content_copy">content_copy</button>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md shadow-sm hover:shadow-md transition-all">Save Changes</button>
+</div>
+</div>
+</aside>
+</main>
+<!-- Floating Upload FAB (Contextual for Home/Dashboard/Media) -->
+<button class="fixed bottom-gutter right-gutter h-14 w-14 bg-secondary-container text-on-secondary-container rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-all md:hidden">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>
