@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zona Integritas - KLHK INTEGRITAS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2e3131",
+                        "primary": "#012d1d",
+                        "on-primary-fixed": "#002114",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1b4332",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "surface-container-low": "#f3f4f3",
+                        "surface-container": "#edeeed",
+                        "primary-fixed": "#c1ecd4",
+                        "tertiary-fixed-dim": "#f5b7b4",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9f8",
+                        "outline-variant": "#c1c8c2",
+                        "tertiary": "#401b1b",
+                        "on-tertiary-fixed": "#331111",
+                        "on-tertiary-fixed-variant": "#673a39",
+                        "surface-variant": "#e1e3e2",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d9dad9",
+                        "outline": "#717973",
+                        "on-surface": "#191c1c",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "on-tertiary-container": "#d29895",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "secondary-fixed": "#ffdcc3",
+                        "inverse-on-surface": "#f0f1f0",
+                        "on-surface-variant": "#414844",
+                        "on-primary-container": "#86af99",
+                        "inverse-primary": "#a5d0b9",
+                        "on-background": "#191c1c",
+                        "on-secondary-container": "#7a502e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e7",
+                        "surface-container-highest": "#e1e3e2",
+                        "tertiary-fixed": "#ffdad8",
+                        "background": "#f9f9f8",
+                        "secondary": "#7f5533",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "tertiary-container": "#5a302f",
+                        "surface-bright": "#f9f9f8",
+                        "secondary-container": "#ffc69b",
+                        "on-secondary-fixed": "#2f1500",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#3f6653",
+                        "on-surface": "#191c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "caption": ["Public Sans"],
+                        "headline-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: #f3f4f3;
+            border-left: 4px solid #012d1d;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-16">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                KLHK INTEGRITAS
+            </div>
+<nav class="hidden md:flex gap-md items-center h-full">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-on-surface-variant transition-colors px-3 py-2" href="#">Beranda</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 h-full flex items-center" href="#">Profil</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-on-surface-variant transition-colors px-3 py-2" href="#">Program</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-on-surface-variant transition-colors px-3 py-2" href="#">Layanan</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined p-2 text-on-surface-variant">search</button>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-lg py-2 rounded-lg hover:opacity-90 transition-all active:opacity-80">Masuk</button>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-xl max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Sidebar Navigation -->
+<aside class="md:col-span-3 space-y-xs">
+<div class="mb-md p-2">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">Unit Kerja</h3>
+</div>
+<nav class="flex flex-col">
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">Dit. PLTTDLB3 &amp; Non B3</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">Dit. PB3</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">Dit. PPLH</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">PUSARPEDAL</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">PUSDAL BALINUSRA</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">PUSDAL SUMA</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface hover:bg-surface-container transition-colors" href="#">Dit. PSLH</a>
+<a class="px-md py-sm font-body-md text-body-md text-on-surface sidebar-active" href="#">Dit. PDLKWS</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<section class="md:col-span-9">
+<!-- Hero Header -->
+<div class="relative rounded-xl overflow-hidden mb-lg aspect-[21/9]">
+<img class="w-full h-full object-cover" data-alt="A panoramic, high-resolution aerial view of a lush Indonesian tropical rainforest under soft, morning sunlight. The scene is dominated by vibrant primary greens and deep forest shades, conveying a sense of environmental stewardship and institutional stability. Mist rolls between ancient trees, highlighting the prestigious and serene atmosphere of the Ministry of Environment and Forestry's domain." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPfu-vQK11mtZIHEmD7ruuoAHgh1gM3hOG1UI3J9hfuPGEZBQ8-s-BI5GBNdvpBAsszXQ0VPhBsPmiM29Q3lmelZ5OthqhVmtBDzc2V4ybs9-4LeyZhC96O6ZVs4l2hdtYViEjHSE4py09xaI8VoLs34clYNJKTiR9zFvOgdaf5vIaxMoNHpfT8Q25FAZ742BaeTiU9NWSd3rCt2X666N1OxY9x257hJut2azFXqDXTWSvDzTJUUf_7v-zZ-6CzwJNt-hUn9eKo1E"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center p-lg">
+<div class="max-w-md">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-sm">Zona Integritas KLHK</h1>
+<p class="font-body-md text-body-md text-primary-fixed">Komitmen kami untuk mewujudkan birokrasi yang bersih, melayani, dan bebas korupsi di seluruh lingkup Kementerian Lingkungan Hidup dan Kehutanan.</p>
+</div>
+</div>
+</div>
+<!-- Intro Section -->
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl mb-lg shadow-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Reformasi Birokrasi &amp; Integritas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Kementerian Lingkungan Hidup dan Kehutanan (KLHK) terus berupaya memperkuat tata kelola pemerintahan melalui pembangunan Zona Integritas (ZI) menuju Wilayah Bebas dari Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM). Kami berfokus pada peningkatan kualitas layanan publik serta pencegahan korupsi yang terstruktur dan berkelanjutan.
+                </p>
+</div>
+<!-- Bento Grid - Key Indicators -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Large Card -->
+<div class="md:col-span-2 bg-surface-container-lowest border border-outline-variant p-lg rounded-xl flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-[28px]">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Pakta Integritas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Dokumen pernyataan komitmen bersama oleh seluruh pejabat dan staf KLHK untuk menjaga etika dan profesionalisme.</p>
+</div>
+<button class="mt-lg flex items-center gap-xs font-label-md text-label-md text-primary group-hover:gap-sm transition-all">
+                        Unduh Dokumen <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Vertical Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm hover:shadow-md transition-all group flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-secondary-container text-[28px]">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Gratifikasi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-auto">Layanan pelaporan penerimaan hadiah atau fasilitas oleh pegawai kementerian.</p>
+<button class="mt-lg font-label-md text-label-md text-primary">Laporkan Sekarang</button>
+</div>
+<!-- Icon Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm hover:shadow-md transition-all flex items-center gap-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">description</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Standar Layanan</h4>
+<p class="font-caption text-caption text-on-surface-variant">Informasi SOP dan mutu pelayanan.</p>
+</div>
+</div>
+<!-- Icon Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm hover:shadow-md transition-all flex items-center gap-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">record_voice_over</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Saluran Pengaduan</h4>
+<p class="font-caption text-caption text-on-surface-variant">Portal WBS dan aspirasi publik.</p>
+</div>
+</div>
+<!-- Icon Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm hover:shadow-md transition-all flex items-center gap-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">analytics</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Statistik ZI</h4>
+<p class="font-caption text-caption text-on-surface-variant">Data real-time indeks persepsi.</p>
+</div>
+</div>
+</div>
+<!-- Quick Access Services Section -->
+<div class="mt-xl">
+<div class="flex justify-between items-end mb-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Layanan Kementerian</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Akses cepat ke portal layanan administrasi dan informasi lingkungan hidup.</p>
+</div>
+<a class="font-label-md text-label-md text-primary flex items-center gap-xs hover:underline" href="#">
+                        Lihat Semua Layanan <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-sm">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col items-center text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary">assignment</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">PTSP</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col items-center text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary">rate_review</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Pengaduan</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col items-center text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary">cloud_done</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">SRN PPI</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col items-center text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary">currency_exchange</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Bursa Karbon</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col items-center text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary">info</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">PPID</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col items-center text-center hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-sm group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary">support_agent</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">WCC</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed w-full mt-xl">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between">
+<div class="mb-lg md:mb-0 max-w-sm">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mb-base">KLHK INTEGRITAS</div>
+<p class="font-body-md text-body-md text-on-primary/80">Menuju birokrasi yang modern, transparan, dan berlandaskan pada keberlanjutan lingkungan hidup.</p>
+</div>
+<div class="grid grid-cols-2 gap-lg">
+<div class="flex flex-col gap-base">
+<span class="font-label-md text-label-md text-primary-fixed uppercase opacity-60">Tautan Cepat</span>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-secondary-fixed transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-secondary-fixed transition-colors" href="#">Syarat &amp; Ketentuan</a>
+</div>
+<div class="flex flex-col gap-base">
+<span class="font-label-md text-label-md text-primary-fixed uppercase opacity-60">Bantuan</span>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-secondary-fixed transition-colors" href="#">Peta Situs</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-secondary-fixed transition-colors" href="#">Kontak Kami</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-md border-t border-on-primary/10">
+<p class="font-body-md text-body-md text-on-primary opacity-90">© 2024 Kementerian Lingkungan Hidup dan Kehutanan RI. Hak Cipta Dilindungi Undang-Undang.</p>
+</div>
+</footer>
+</body></html>
