@@ -135,12 +135,15 @@
 </div>
     </div>
 </div>
-<div class="hidden lg:flex items-center gap-md ml-auto">
-<div class="flex items-center gap-3 font-label-md text-label-md whitespace-nowrap">
+<button id="mobileMenuBtn" class="lg:hidden p-2 text-primary ml-auto flex items-center justify-center border border-outline-variant rounded-lg">
+    <span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+<div id="mainNavMenu" class="hidden lg:flex flex-col lg:flex-row items-start lg:items-center gap-md absolute lg:static top-[140px] left-0 w-full lg:w-auto bg-surface lg:bg-transparent p-6 lg:p-0 shadow-xl lg:shadow-none z-50 border-b lg:border-none border-outline-variant">
+<div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-3 font-label-md text-label-md whitespace-normal lg:whitespace-nowrap w-full">
 
 <div class="relative group">
     <a class="text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer py-2" href="#">Profil <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span></a>
-    <div class="absolute left-0 top-[100%] hidden group-hover:block w-56 pt-2 z-50">
+    <div class="static lg:absolute left-0 top-[100%] hidden group-hover:block w-full lg:w-56 pt-2 z-50">
         <div class="bg-surface-container-lowest border border-outline-variant shadow-lg rounded-lg py-2">
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Visi Misi</a>
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Tentang Kami</a>
@@ -156,7 +159,7 @@
 </div>
 <div class="relative group">
     <a class="text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer py-2" href="#">Program <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span></a>
-    <div class="absolute left-0 top-[100%] hidden group-hover:block min-w-max pt-2 z-50">
+    <div class="static lg:absolute left-0 top-[100%] hidden group-hover:block w-full lg:min-w-max pt-2 z-50">
         <div class="bg-surface-container-lowest border border-outline-variant shadow-lg rounded-lg py-2">
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Kalpataru</a>
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Proper</a>
@@ -170,7 +173,7 @@
 </div>
 <div class="relative group">
     <a class="text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer py-2" href="#">Pelayanan Publik <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span></a>
-    <div class="absolute left-0 top-[100%] hidden group-hover:block min-w-max pt-2 z-50">
+    <div class="static lg:absolute left-0 top-[100%] hidden group-hover:block w-full lg:min-w-max pt-2 z-50">
         <div class="bg-surface-container-lowest border border-outline-variant shadow-lg rounded-lg py-2">
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">SP4N Lapor</a>
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Publikasi</a>
@@ -184,7 +187,7 @@
 </div>
 <div class="relative group">
     <a class="text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer py-2" href="#">PPID <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span></a>
-    <div class="absolute left-0 top-[100%] hidden group-hover:block min-w-max pt-2 z-50">
+    <div class="static lg:absolute left-0 top-[100%] hidden group-hover:block w-full lg:min-w-max pt-2 z-50">
         <div class="bg-surface-container-lowest border border-outline-variant shadow-lg rounded-lg py-2">
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">PPID Kemenlh</a>
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Tugas dan Fungsi PPID</a>
@@ -201,7 +204,7 @@
 </div>
 <div class="relative group">
     <a class="text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer py-2" href="#">Berita <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span></a>
-    <div class="absolute left-0 top-[100%] hidden group-hover:block min-w-max pt-2 z-50">
+    <div class="static lg:absolute left-0 top-[100%] hidden group-hover:block w-full lg:min-w-max pt-2 z-50">
         <div class="bg-surface-container-lowest border border-outline-variant shadow-lg rounded-lg py-2">
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Berita</a>
             <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Siaran Pers</a>
@@ -498,4 +501,16 @@
 </footer>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNavMenu = document.getElementById('mainNavMenu');
+    if(mobileMenuBtn && mainNavMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNavMenu.classList.toggle('hidden');
+            mainNavMenu.classList.toggle('flex');
+        });
+    }
+});
+</script>
 </body></html>
