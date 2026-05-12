@@ -111,36 +111,18 @@
 </head>
 <body class="bg-background text-on-background min-h-screen">
 <!-- SideNavBar -->
-<aside class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low flex flex-col py-md border-r border-outline-variant z-50">
+<aside id="sidebar" class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low flex flex-col py-md border-r border-outline-variant z-50 transition-transform duration-300">
 <div class="px-gutter mb-lg">
 <h1 class="font-headline-lg text-headline-lg text-primary">MoEF Admin</h1>
 <p class="font-label-md text-label-md text-on-surface-variant">Official CMS Portal</p>
 </div>
 <nav class="flex-1 px-4 space-y-1 custom-scrollbar overflow-y-auto">
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="pengaturan.html">
-<span class="material-symbols-outlined">dashboard</span>
-<span>Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="article_manager.html">
-<span class="material-symbols-outlined">description</span>
-<span>Article Manager</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="service_directory.html">
-<span class="material-symbols-outlined">list_alt</span>
-<span>Service Directory</span>
-</a>
+
 <a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md" href="complaint_manager.html">
 <span class="material-symbols-outlined">feedback</span>
 <span>Complaint Manager</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="reports.html">
-<span class="material-symbols-outlined">analytics</span>
-<span>Reports &amp; Publications</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all font-label-md text-label-md" href="media_library.html">
-<span class="material-symbols-outlined">photo_library</span>
-<span>Media Library</span>
-</a>
+
 </nav>
 <div class="px-4 mt-auto space-y-1 border-t border-outline-variant pt-md">
 <a class="w-full flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="index.html">
@@ -158,10 +140,11 @@
 </div>
 </aside>
 <!-- Main Content Area -->
-<main class="ml-64 min-h-screen">
+<main id="mainContent" class="ml-64 min-h-screen transition-all duration-300">
 <!-- TopNavBar -->
 <header class="flex justify-between items-center px-gutter w-full h-16 sticky top-0 z-40 bg-surface-container-lowest shadow-sm">
 <div class="flex items-center gap-md flex-1 max-w-xl">
+<button id="sidebarToggleBtn" class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container rounded-full p-2 transition-colors active:scale-95">menu</button>
 <div class="relative w-full">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
 <input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Search complaints, IDs, or regions..." type="text"/>
@@ -429,4 +412,24 @@
 <button class="fixed bottom-8 right-8 w-14 h-14 bg-primary-container text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-50">
 <span class="material-symbols-outlined text-[28px]" data-icon="add">add</span>
 </button>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('mainContent');
+    const toggleBtn = document.getElementById('sidebarToggleBtn');
+    
+    if(sidebar && mainContent && toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            if (mainContent.classList.contains('ml-64')) {
+                mainContent.classList.remove('ml-64');
+                mainContent.classList.add('ml-0');
+            } else {
+                mainContent.classList.remove('ml-0');
+                mainContent.classList.add('ml-64');
+            }
+        });
+    }
+});
+</script>
 </body></html>
