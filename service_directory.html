@@ -114,7 +114,7 @@
 </head>
 <body class="bg-surface-bright text-on-surface">
 <!-- SideNavBar -->
-<aside class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low dark:bg-inverse-surface flex flex-col h-full py-md border-r border-outline-variant z-50">
+<aside id="sidebar" class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low dark:bg-inverse-surface flex flex-col h-full py-md border-r border-outline-variant z-50 transition-transform duration-300">
 <div class="px-6 mb-8">
 <h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim">MoEF Admin</h1>
 <p class="font-label-md text-label-md text-on-surface-variant opacity-70">Official CMS Portal</p>
@@ -132,10 +132,7 @@
 <span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
                 Service Directory
             </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="complaint_manager.html">
-<span class="material-symbols-outlined" data-icon="feedback">feedback</span>
-                Complaint Manager
-            </a>
+
 <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded-lg font-label-md text-label-md" href="reports.html">
 <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
                 Reports &amp; Publications
@@ -167,10 +164,11 @@
 </div>
 </aside>
 <!-- Main Content Area -->
-<main class="ml-64 min-h-screen">
+<main id="mainContent" class="ml-64 min-h-screen transition-all duration-300">
 <!-- TopNavBar -->
 <header class="flex justify-between items-center px-gutter w-full h-16 sticky top-0 z-40 bg-surface-container-lowest shadow-sm dark:shadow-none">
 <div class="flex items-center gap-4">
+<button id="sidebarToggleBtn" class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container rounded-full p-2 transition-colors active:scale-95">menu</button>
 <div class="relative">
 <span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant material-symbols-outlined" data-icon="search">search</span>
 <input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full w-64 text-body-md focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Search services..." type="text"/>
@@ -359,4 +357,24 @@
 </div>
 </footer>
 </main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('mainContent');
+    const toggleBtn = document.getElementById('sidebarToggleBtn');
+    
+    if(sidebar && mainContent && toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            if (mainContent.classList.contains('ml-64')) {
+                mainContent.classList.remove('ml-64');
+                mainContent.classList.add('ml-0');
+            } else {
+                mainContent.classList.remove('ml-0');
+                mainContent.classList.add('ml-64');
+            }
+        });
+    }
+});
+</script>
 </body></html>
