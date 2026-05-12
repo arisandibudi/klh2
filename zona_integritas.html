@@ -120,7 +120,8 @@
 <div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
                 KLHK INTEGRITAS
             </div>
-<nav class="hidden md:flex gap-md items-center h-full">
+<button id="mobileMenuBtn" class="md:hidden material-symbols-outlined text-primary p-2 ml-auto border border-outline-variant rounded-lg">menu</button>
+<nav id="mainNavMenu" class="hidden md:flex flex-col md:flex-row gap-md items-start md:items-center h-auto md:h-full absolute md:static top-16 left-0 w-full md:w-auto bg-surface md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none border-b md:border-none border-outline-variant z-50">
 <a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-on-surface-variant transition-colors px-3 py-2" href="index.html">Beranda</a>
 <a class="font-label-md text-label-md text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 h-full flex items-center" href="#">Profil</a>
 <a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-on-surface-variant transition-colors px-3 py-2" href="#">Program</a>
@@ -242,4 +243,16 @@
 <p class="font-body-md text-body-md text-on-primary opacity-90">© 2024 Kementerian Lingkungan Hidup dan Kehutanan RI. Hak Cipta Dilindungi Undang-Undang.</p>
 </div>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNavMenu = document.getElementById('mainNavMenu');
+    if(mobileMenuBtn && mainNavMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNavMenu.classList.toggle('hidden');
+            mainNavMenu.classList.toggle('flex');
+        });
+    }
+});
+</script>
 </body></html>
