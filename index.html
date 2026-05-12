@@ -138,7 +138,22 @@
 <div class="hidden md:flex items-center gap-lg">
 <div class="flex items-center gap-md font-body-md text-body-md">
 <a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Beranda</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Profil</a>
+<div class="relative group">
+    <a class="text-on-surface-variant hover:text-secondary transition-colors flex items-center gap-1 cursor-pointer py-2" href="#">Profil <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span></a>
+    <div class="absolute left-0 top-[100%] hidden group-hover:block w-56 pt-2 z-50">
+        <div class="bg-surface-container-lowest border border-outline-variant shadow-lg rounded-lg py-2">
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Visi Misi</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Tentang Kami</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Nilai KLH</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Tugas dan Fungsi</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Struktur Organisasi</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Profil Menteri</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Profil Wakil Menteri</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Profil Pejabat</a>
+            <a class="block px-4 py-2 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors" href="#">Unit Kerja</a>
+        </div>
+    </div>
+</div>
 <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Program</a>
 <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Layanan</a>
 <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">PPID</a>
